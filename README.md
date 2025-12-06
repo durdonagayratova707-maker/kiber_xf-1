@@ -1,9 +1,11 @@
 ```mermaid
 flowchart TD
-    A[Boshlash] --> B[Xabarni olish: input()]
-    B --> C[Private keyni o‘qish: RSA.import_key]
-    C --> D[Xesh yaratish: SHA256]
-    D --> E[Imzo yaratish: pkcs1_15.sign]
-    E --> F[Imzoni faylga yozish: signature.sig]
+    A[Boshlash]
+    A --> B[RSA key generate(2048)]
+    B --> C[Private key export]
+    B --> D[Public key export]
+    C --> E[private.pem faylga yozish]
+    D --> F[public.pem faylga yozish]
+    E --> G[Tugatish]
     F --> G[Tugatish]
 ```
